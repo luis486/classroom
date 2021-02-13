@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ClassroomGUI">
+   <children>
+      <Pane prefHeight="534.0" prefWidth="475.0">
+         <children>
+            <Label layoutX="164.0" layoutY="69.0" text="Join to classroom">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="122.0" layoutY="102.0" text="Create your account">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="145.0" text="Username:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="107.0" layoutY="181.0" prefHeight="26.0" prefWidth="65.0" text="Password:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUsername" layoutX="198.0" layoutY="143.0" />
+            <Label layoutX="97.0" layoutY="220.0" text="Profile  Photo:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPathPhoto" layoutX="198.0" layoutY="218.0" />
+            <Button layoutX="361.0" layoutY="215.0" mnemonicParsing="false" onAction="#fileChooser" prefHeight="32.0" prefWidth="65.0" text="Browse" />
+            <RadioButton fx:id="rbGender1" layoutX="188.0" layoutY="254.0" mnemonicParsing="false" text="Male">
+               <toggleGroup>
+                  <ToggleGroup fx:id="chooseGender" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="rbGender2" layoutX="247.0" layoutY="254.0" mnemonicParsing="false" text="Female" toggleGroup="$chooseGender" />
+            <RadioButton fx:id="rbGender3" layoutX="309.0" layoutY="254.0" mnemonicParsing="false" text="Other" toggleGroup="$chooseGender" />
+            <Label layoutX="115.0" layoutY="252.0" text="Gender:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="txtPassword" layoutX="198.0" layoutY="182.0" />
+            <Label layoutX="124.0" layoutY="284.0" prefHeight="20.0" prefWidth="51.0" text="Career:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="375.0" prefHeight="20.0" prefWidth="65.0" text="Birthday:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <DatePicker fx:id="txtBirthday" layoutX="177.0" layoutY="372.0" />
+            <ChoiceBox fx:id="comBox" layoutX="189.0" layoutY="412.0" prefWidth="150.0">
+               <contextMenu>
+                  <ContextMenu>
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Firefox" />
+                        <MenuItem mnemonicParsing="false" text="Google Chrome" />
+                        <MenuItem mnemonicParsing="false" text="Microsoft Edge" />
+                    </items>
+                  </ContextMenu>
+               </contextMenu></ChoiceBox>
+            <Label layoutX="67.0" layoutY="414.0" text="Favorite browser: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="cbTelematic" layoutX="193.0" layoutY="286.0" mnemonicParsing="false" text="Telematic Engeneering" />
+            <CheckBox fx:id="cbSoftware" layoutX="195.0" layoutY="314.0" mnemonicParsing="false" text="Software Engeneering" />
+            <CheckBox fx:id="cbIndustrial" layoutX="194.0" layoutY="343.0" mnemonicParsing="false" text="Industrial Engeneering" />
+            <Button layoutX="184.0" layoutY="454.0" mnemonicParsing="false" onAction="#save" text="Save">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</VBox>

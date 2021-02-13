@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ClassroomGUI">
+   <children>
+      <TableView fx:id="accountList" layoutY="80.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="375.0" prefWidth="475.0">
+        <columns>
+          <TableColumn fx:id="colUserName" prefWidth="97.0" text="Username" />
+          <TableColumn fx:id="colGender" prefWidth="69.0" text="Gender" />
+            <TableColumn fx:id="colCareer" prefWidth="106.0" text="Career" />
+            <TableColumn fx:id="colBirthday" prefWidth="97.0" text="Birthday" />
+            <TableColumn fx:id="colBrowser" prefWidth="104.0" text="Browser" />
+        </columns>
+      </TableView>
+      <Button layoutX="376.0" layoutY="24.0" mnemonicParsing="false" onAction="#logOut" prefHeight="36.0" prefWidth="82.0" text="Log out">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="22.0" layoutY="26.0" prefHeight="32.0" prefWidth="189.0" text="User Account List">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="54.0" fitWidth="54.0" layoutX="314.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="lblName" layoutX="238.0" layoutY="34.0" prefHeight="17.0" prefWidth="61.0" text="..." />
+   </children>
+</Pane>
