@@ -98,6 +98,12 @@ public class ClassroomGUI {
         this.classRoom = classRoom;
     }
 
+    public void initComboBox(){
+        ObservableList<String> comBox = FXCollections.observableArrayList("Mozilla", "Firefox", "Chrome", "Edge", "Chronium");
+        comboBox.setValue("Mozilla");
+        comboBox.setItems(comBox);
+    }
+
     public void showLogIn() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
         fxmlLoader.setController(this);
@@ -152,6 +158,7 @@ public class ClassroomGUI {
         Parent root = fxmlLoader.load();
         mainPane.getChildren().clear();
         mainPane.getChildren().setAll(root);
+        initComboBox();
     }
     
     @FXML
@@ -179,7 +186,7 @@ public class ClassroomGUI {
     @FXML
     void createanAccount(ActionEvent event) throws IOException {
         String career="";
-		var gender1= "";
+		var gender= "";
 		if(cbSoftware.isSelected()) {
 			career="Software Engineering";
 		}else if(cbTelematic.isSelected()) {
@@ -188,11 +195,11 @@ public class ClassroomGUI {
 			career="Industrial Engineering";
 		}
 		if(rbGender1.isSelected()) {
-			gender1="Male";
+			gender="Male";
 		}else if(rbGender2.isSelected()) {
-			gender1="Female";
+			gender="Female";
 		}else if(rbGender3.isSelected()) {
-			gender1="Other";
+			gender="Other";
 		}
 		if (userVerification(txtUsername.getText())==null) { 
 			File f = new File(txtPathPhoto.getText());
@@ -201,13 +208,13 @@ public class ClassroomGUI {
 				txtUsername.getText(), 
 				txtPassword.getText(), 
 				img, 
-				gender1, 
+				gender, 
 				career,
 				txtBirthday.getValue().toString(),
 				comboBox.getSelectionModel().getSelectedItem().toString());
 				showLogIn();
 		}else {
-			Alert alert = new Alert(AlertType.WARNING);
+			Alert alert = new Alert(AlertType.ERROR);
 			alert.setTitle("Warning Dialog");
 			alert.setHeaderText("Error");
 			alert.setContentText("The name of the user cant be used");

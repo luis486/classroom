@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<Pane fx:id="mainPane" prefHeight="534.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.ClassroomGUI">
+<Pane fx:id="mainPane" prefHeight="534.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
       <Label layoutX="24.0" layoutY="14.0" opacity="0.54" prefHeight="34.0" prefWidth="115.0" text="Classroom">
          <font>

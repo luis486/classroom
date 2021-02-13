@@ -15,7 +15,6 @@ public class UserAccount {
     public UserAccount() {
     }
 
-
     public UserAccount(String userName, String password, Image photo, String chooseGender, String chooseCareer, String birthday, String browser) {
         this.userName = userName;
         this.password = password;

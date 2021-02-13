@@ -25,7 +25,6 @@ public class Main extends Application{
         Parent root = fxmlloader.load();
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("ClassRoom");
         primaryStage.show();
         this.classRoomGUI.showLogIn();
     }
